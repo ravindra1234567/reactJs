@@ -10,6 +10,20 @@ import FormValidation from "./FormValidation.js";
 import FunctionEvent from './FunctionEvent.js';
 import Listing from './Listing.js';
 import Style from './Style.js';
+
+
+import {BrowserRouter as Router , Route , Link} from "react-router-dom";
+import Home1 from "./cmp/Home.js";
+import About from "./cmp/About.js";
+import Form1 from "./cmp/Form.js";
+import { BrowserRouter } from 'react-router-dom';
+
+import Bootstrap from "./Bootstrap.js";
+import Modal1 from "./Modal1.js";
+
+
+
+import CallApi from "./CallApi.js";
 function App() {
   return (
     <div className="App">
@@ -26,8 +40,20 @@ function App() {
        {<FormValidation/>}
        {<Listing />}
       {<Style data = "apply3"/>}
-
+      {<CallApi />}
+      {<Modal1 />}
       </header>
+      {<Bootstrap />}
+      <Router>
+        <Link to = "">  Home  </Link>
+        <Link to = "/form">  Form  </Link>
+        <Link to = "/about">  About  </Link>
+
+        <Route exact path = "/" component={Home1} /> 
+        <Route path="/form" component= {Form1} />
+        <Route path="/about" component={About} />
+      </Router>
+
     </div>
   );
 }
