@@ -8,6 +8,8 @@ import Hooks from './Hooks.js';
 import Form from './Form';
 import FormValidation from "./FormValidation.js";
 import FunctionEvent from './FunctionEvent.js';
+import Listing from './Listing.js';
+import Style from './Style.js';
 function App() {
   return (
     <div className="App">
@@ -22,6 +24,9 @@ function App() {
        {<Hooks/>}
        {<Form/>}
        {<FormValidation/>}
+       {<Listing />}
+      {<Style data = "apply3"/>}
+
       </header>
     </div>
   );
